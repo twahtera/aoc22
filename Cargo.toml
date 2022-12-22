@@ -7,6 +7,7 @@ edition = "2021"
 
 [dependencies]
 itertools = "0.10.5"
+nom = "7.1.1"
 num = "0.4.0"
 
 [[bin]]
@@ -56,3 +57,7 @@ path = "src/day11.rs"
 [[bin]]
 name = "day12"
 path = "src/day12.rs"
+
+[[bin]]
+name = "day13"
+path = "src/day13.rs"
