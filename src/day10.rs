@@ -2,8 +2,8 @@ use num::abs;
 
 #[derive(Clone, Debug)]
 enum I {
-    addx(i64),
-    noop,
+    Addx(i64),
+    Noop,
 }
 type State = i64;
 
@@ -60,17 +60,17 @@ fn parse(s: &str) -> Vec<I> {
 
 fn parse_line(s: &str) -> I {
     if s == "noop" {
-        I::noop
+        I::Noop
     } else {
-        I::addx(s.split(' ').nth(1).unwrap().parse().unwrap())
+        I::Addx(s.split(' ').nth(1).unwrap().parse().unwrap())
     }
 }
 
 fn do_step(s: State, i: I) -> Vec<State> {
     println!("state: {:?}, i: {:?}", s, i);
     match i {
-        I::noop => vec![s],
-        I::addx(x) => vec![s, s + x],
+        I::Noop => vec![s],
+        I::Addx(x) => vec![s, s + x],
     }
 }
 
