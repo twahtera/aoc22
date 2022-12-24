@@ -9,6 +9,7 @@ edition = "2021"
 itertools = "0.10.5"
 nom = "7.1.1"
 num = "0.4.0"
+rayon = "1.6.1"
 
 [[bin]]
 name = "day1"
@@ -65,3 +66,7 @@ path = "src/day13.rs"
 [[bin]]
 name = "day14"
 path = "src/day14.rs"
+
+[[bin]]
+name = "day15"
+path = "src/day15.rs"
