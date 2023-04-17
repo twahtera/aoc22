@@ -34,7 +34,7 @@ fn manhattan((a1, a2): Point, (b1, b2): Point) -> i64 {
     (a1 - b1).abs() + (a2 - b2).abs()
 }
 
-// return the endpoints of an excluded area on a line with y = y
+// return the endpoints of an excluded area on the line y
 fn line_exclusions(y: i64, scanner: Point, beacon: Point) -> (i64, i64) {
     let dist = manhattan(scanner, beacon);
     let excl_width = dist - (y - scanner.1).abs();
